@@ -1,0 +1,79 @@
+html{
+    height: 100%;
+    color: white;
+}
+
+body{
+    background: url("../images/background_bubbles.png");
+    background-size: cover;
+    padding: 50px;
+}
+
+
+#title{
+    border-style: solid;
+    background-color: purple;
+    opacity: .7;
+    padding: 10px;
+}
+#instructions{
+    border-style: solid;
+    background-color: purple;
+    opacity: .7;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+
+#computerNumber{
+    border-style: solid;
+    background-color: purple;
+    opacity: .7;
+    padding: 10px;
+}
+
+#win_loss{
+    border-style: solid;
+    background-color: purple;
+    opacity: .7;
+    padding: 10px;
+}
+
+#score{
+    border-style: solid;
+    background-color: purple;
+    opacity: .7;
+    padding: 10px;
+
+}
+
+
+
+/* do I add crystal images as ID or Class?? */
+
+.crystals{
+    border-style: solid;
+    background-color: purple;
+    opacity: .7;
+    padding: 10px;
+
+}
+
+#crystalRed-image{
+    width: 200px;
+    height: 200px;
+}
+
+#crystalBlue-image{
+    width: 200px;
+    height: 200px;
+}
+#crystalGreen-image{
+    width: 200px;
+    height: 200px;
+}
+
+#crystalPurple-image{
+    width: 200px;
+    height: 200px;
+}

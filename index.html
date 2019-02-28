@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CrystalsCollector! Game</title>
+
+    <!--bootstrap/jquery links-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+<!--CSS style  & reset links-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="reset" type="text/css" href="assets/css/reset.css">
+    <!--game.js link ... does this go on bottom?-->
+    <script src="assets/javascript/game.js"></script>
+
+</head>
+<body>
+
+    <!-- Add document.pageready tag -->
+    <!-- container for whole page -->
+<div class = "container">
+    <!--box w/title-->
+<div id = "title"> <h1>Crystal Collector!</h1></div>
+<!--box w/instructions-->
+<div id = "instructions">
+    <p>You will be given a random number at the start of the game.</p>
+    <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.</p>
+    <p>You win the game by matching your total score to the random number.  You lose the game if your total score goes above the random number.</p>
+    <p>The value of each crystal is hidden from you until you click on it.</p>
+    <p>Each time the game starts, the game will change the values of each crystal and a new random number will be generated.</p>
+</div>
+
+<!--container to keep computerNumber and wins_losses in same row-->
+<div class = "row">
+    <!--box w/random # to match-->
+    <div id = "computerNumber" class = "col-sm-6">
+        <p>Number to Match: <span id = "computerNumber"></span></p>
+    </div>
+
+    <!--box w/ wins & losses-->
+    <div id = "win_loss" class = "col-sm-6">
+        <p>Wins: <span id = "wins"></span></p>
+        <p>Losses: <span id = "losses"></span></p>
+
+    </div>
+</div> <!--end container row-->
+
+<!--4 buttons w/crystal images-->
+<div class = "crystals">
+</div>
+
+<!--simple box w/text-->
+<div id = "score">
+<p>Your total score is:</p>
+</div>
+<!--box w/total crystal score-->
+
+
+</div>
+
+</body>
+</html>
