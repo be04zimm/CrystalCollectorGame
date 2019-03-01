@@ -4,61 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CrystalsCollector! Game</title>
-
-    <!--bootstrap/jquery links-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>Crystals Collector Game</title>
 
 
-<!--CSS style  & reset links-->
+    <!--CSS style  & reset links-->
+    
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+        <!--jQuery link-->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="reset" type="text/css" href="assets/css/reset.css">
-    <!--game.js link ... does this go on bottom?-->
-    <script src="assets/javascript/game.js"></script>
+
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
 
 </head>
 <body>
 
-    <!-- Add document.pageready tag -->
     <!-- container for whole page -->
 <div class = "container">
-    <!--box w/title-->
-<div id = "title"> <h1>Crystal Collector!</h1></div>
-<!--box w/instructions-->
-<div id = "instructions">
-    <p>You will be given a random number at the start of the game.</p>
-    <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.</p>
-    <p>You win the game by matching your total score to the random number.  You lose the game if your total score goes above the random number.</p>
-    <p>The value of each crystal is hidden from you until you click on it.</p>
-    <p>Each time the game starts, the game will change the values of each crystal and a new random number will be generated.</p>
-</div>
-
-<!--container to keep computerNumber and wins_losses in same row-->
-<div class = "row">
-    <!--box w/random # to match-->
-    <div id = "computerNumber" class = "col-sm-6">
-        <p>Number to Match: <span id = "computerNumber"></span></p>
+        <!--box w/title-->
+    <div id = "title"> <h1>Crystal Collector!</h1></div>
+    <!--box w/instructions **make into list format?-->
+    <div id = "instructions">
+        <p>* You will be given a random number at the start of the game.</p>
+        <p>* There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.</p>
+        <p>* You win the game by matching your total score to the random number.  You lose the game if your total score goes above the random number.</p>
+        <p>* The value of each crystal is hidden from you until you click on it.</p>
+        <p>* Each time the game starts, the game will change the values of each crystal and a new random number will be generated.</p>
     </div>
 
-    <!--box w/ wins & losses-->
-    <div id = "win_loss" class = "col-sm-6">
-        <p>Wins: <span id = "wins"></span></p>
-        <p>Losses: <span id = "losses"></span></p>
+
+    <!--4 buttons w/crystal images-->
+    <div id="gems">
+            <img id="greenGem" class="gems" src="assets/images/gem_green.png" alt="green gem">
+            <img id="blueGem" class="gems" src="assets/images/gem_blue.jpg" alt="blue gem">
+            <img id="purpleGem" class="gems" src="assets/images/gem_purple.png" alt="purple gem">
+            <img id="redGem" class="gems" src="assets/images/gem_red.png" alt="red gem">
 
     </div>
-</div> <!--end container row-->
 
-<!--4 buttons w/crystal images-->
-<div class = "crystals">
-</div>
 
-<!--simple box w/text-->
-<div id = "score">
-<p>Your total score is:</p>
-</div>
-<!--box w/total crystal score-->
+    <!--container to keep computerNumber and wins_losses in same row-->
+    <div class = "scoreboard">
+            <h2 id="computerNumber">Guess the Number: <span id="target"></span></h2>
+            <h2 id="score">Player Score: <span id="playerScore"></span></h2>
+            
+            <div class="win_loss">
+            
+            <h2><strong>Wins: </strong> <span id="win"></span></h2><br>
+            <h2><strong>Losses: </strong> <span id="loss"></span></h2>
+            </div>    
+    </div> <!--end scoreboard row-->
+
 
 
 </div>

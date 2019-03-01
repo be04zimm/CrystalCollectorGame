@@ -15,6 +15,7 @@ body{
     background-color: purple;
     opacity: .7;
     padding: 10px;
+    font-size: 2em;
 }
 #instructions{
     border-style: solid;
@@ -23,20 +24,34 @@ body{
     padding: 10px;
     margin: 10px auto;
 }
+p{
+    margin: 20px;
+    text-size: 1.3em;
 
+}
+
+.scoreboard{
+    display: inline-block;
+}
 
 #computerNumber{
     border-style: solid;
     background-color: purple;
     opacity: .7;
     padding: 10px;
+    padding: 10px;
+    margin: 10px auto;
+
 }
 
-#win_loss{
+.win_loss{
     border-style: solid;
     background-color: purple;
     opacity: .7;
     padding: 10px;
+    padding: 10px;
+    margin: 10px auto;
+
 }
 
 #score{
@@ -44,36 +59,20 @@ body{
     background-color: purple;
     opacity: .7;
     padding: 10px;
+    padding: 10px;
+    margin: 10px auto;
 
 }
 
 
 
-/* do I add crystal images as ID or Class?? */
-
-.crystals{
+.gems{
+    display: inline-block;
+    margin: 10px;
+    height: 150px;
     border-style: solid;
     background-color: purple;
     opacity: .7;
-    padding: 10px;
+    padding: 10px; 
 
-}
-
-#crystalRed-image{
-    width: 200px;
-    height: 200px;
-}
-
-#crystalBlue-image{
-    width: 200px;
-    height: 200px;
-}
-#crystalGreen-image{
-    width: 200px;
-    height: 200px;
-}
-
-#crystalPurple-image{
-    width: 200px;
-    height: 200px;
 }

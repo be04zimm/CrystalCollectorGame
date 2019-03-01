@@ -12,56 +12,84 @@ console.log("Ready to play?!")
 $(document).ready(function() {
 
 
-    // generating random computer #
-    var random = Math.round(Math.random() * (120 - 19) + 19);
-    console.log("Random Number To Match:  " + random);
-    $("#computerNumber").text(random);
-
     var counter = 0;
-    var userTotal = 0;
     var wins = 0;
     var losses = 0;
 
-    $("#numberWins").text(wins);
-    $("#numberLosses").text(losses);
 
-    // crystal buttons
+	function randomNum(min,max){
+		min = Math.ceil(min);
+		max = Math.floor(max);
+		return Math.floor(Math.random() * (max-min +1)) + min;
 
-    //might only need ONE math.random for all 4 crystal buttons??
+	}
 
-    var crystalValues = {};
-    crystalValues[1] = Math.floor(Math.random()*12+1);
-    crystalValues[2] = Math.floor(Math.random()*12+1);
-    crystalValues[3] = Math.floor(Math.random()*12+1);
-    crystalValues[4] = Math.floor(Math.random()*12+1);
+	var targetNumber = randomNum(19,120);
+	$("#target").html(targetNumber);
 
-
-        //not sure if i need a for-loop here --> i think it's supposed to reference "var crystalRed" from lines 29-35 ...?? maybe?
-
-        var crystalRed = $("<img>");
-        crystalRed.addClass("crystalRed-image");
-        crystalRed.toLocaleString("src", "assets/images/gem_red.png");
-        crystalRed.attr("data-crystalValue", crystalRed [i]);
-        $("#crystals").append(crystalRed);
-    
-
-    //add for-loop for other crystal colors
+	var crystalOne= randomNum(1, 12);
+	var crystalTwo= randomNum(1, 12);
+	var crystalThree= randomNum(1, 12);
+	var crystalFour= randomNum(1, 12);
 
 
-    //add click-event for crystals
-    $(".crystal-image").on("click", function() {
-        var crystalValue = ($(this).attr("data-crystalValue"));
-        crystalValue = parseInt (crystalValue);
+	function reset(){
+		counter = 0;
+        targetNumber = randomNum(19,120);
+        $("#target").html(targetNumber);
+		$("#playerScore").text(counter);
+		crystalOne= randomNum(1, 12);
+		crystalTwo= randomNum(1, 12);
+		crystalThree= randomNum(1, 12);
+		crystalFour= randomNum(1, 12);
 
-        counter += crystalValue;
-        alert("New score: " + counter);
+	}
 
-        if(counter === random) {
-            alert ("You win!");
-        }
-            else if (counter >= random) {
-                alert ("You lose!");
-            }
-    });
+	
+	$("#greenGem").on("click", function(){
+		counter += crystalOne;
+		WinLose();
+		$(playerScore).text(counter);
+		
+	});
 
-}) //end document.ready function
+	$("#blueGem").on("click", function(){
+		counter += crystalTwo;
+		WinLose();
+		$(playerScore).text(counter);
+		
+	});
+
+	$("#purpleGem").on("click", function(){
+		counter += crystalThree;
+		WinLose();
+		$(playerScore).text(counter);
+		
+	});
+
+	$("#redGem").on("click", function(){
+		counter += crystalFour;
+		WinLose();
+		$(playerScore).text(counter);
+		
+	});
+
+	function WinLose (){
+
+	if (counter === targetNumber){
+		wins += 1;
+		alert("You Won! Great Job!");
+		$(win).text(wins);
+		reset();
+
+	} else if(counter > targetNumber){
+		losses += 1;
+		alert("You lost. Try again!");
+		$(loss).text(losses);
+		reset();
+	}
+	
+    }
+
+
+}); //end document.ready function
